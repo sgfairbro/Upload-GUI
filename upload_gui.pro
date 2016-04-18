@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui
+QT       += core gui widgets quick
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -15,15 +15,21 @@ TEMPLATE = app
 SOURCES += main.cpp\
         mainwindow.cpp \
     flightcontroltab.cpp \
-    flightplanningtab.cpp
+    flightplanningtab.cpp \
+    flightplanningbackup.cpp
 
 HEADERS  += mainwindow.h \
     flightcontroltab.h \
-    flightplanningtab.h
+    flightplanningtab.h \
+    flightplanningbackup.h
 
 FORMS    += mainwindow.ui \
     flightcontroltab.ui \
-    flightplanningtab.ui
+    flightplanningtab.ui \
+    flightplanningbackup.ui
 
 DISTFILES += \
     navigation.qml
+
+RESOURCES += \
+    resources.qrc

@@ -6,6 +6,7 @@ FlightPlanningTab::FlightPlanningTab(QWidget *parent) :
     ui(new Ui::FlightPlanningTab)
 {
     ui->setupUi(this);
+
 }
 
 FlightPlanningTab::~FlightPlanningTab()

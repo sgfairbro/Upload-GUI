@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include "flightcontroltab.h"
 #include "flightplanningtab.h"
+#include "flightplanningbackup.h"
 #include <QTabWidget>
 #include <QGridLayout>
 
