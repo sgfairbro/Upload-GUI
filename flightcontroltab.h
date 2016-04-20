@@ -108,6 +108,8 @@ private:
     void parseBinaryData(void);
     void updateSensorUI(Sensor_Data_T, GPS_Data_T);
     void writeDataToTextFile(Sensor_Data_T, GPS_Data_T);
+    void setupTransceiver(void);
+    void threadExample();
 
 private slots:
     void sendCommand(int);

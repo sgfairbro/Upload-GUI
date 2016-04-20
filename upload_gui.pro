@@ -4,8 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui widgets quick
-
+QT       += core gui widgets quick webenginewidgets
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 TARGET = upload_gui
@@ -15,21 +14,19 @@ TEMPLATE = app
 SOURCES += main.cpp\
         mainwindow.cpp \
     flightcontroltab.cpp \
-    flightplanningtab.cpp \
-    flightplanningbackup.cpp
+    flightplanningtab.cpp
 
 HEADERS  += mainwindow.h \
     flightcontroltab.h \
-    flightplanningtab.h \
-    flightplanningbackup.h
+    flightplanningtab.h
 
 FORMS    += mainwindow.ui \
     flightcontroltab.ui \
-    flightplanningtab.ui \
-    flightplanningbackup.ui
+    flightplanningtab.ui
 
 DISTFILES += \
-    navigation.qml
+    navigation.qml \
+    map.html
 
 RESOURCES += \
     resources.qrc

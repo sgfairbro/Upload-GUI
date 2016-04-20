@@ -2,6 +2,11 @@
 #define FLIGHTPLANNINGTAB_H
 
 #include <QWidget>
+#include <QtGui>
+#include <QtCore>
+#include <QtWebEngineWidgets/QtWebEngineWidgets>
+#include <QTableWidget>
+
 
 namespace Ui {
 class FlightPlanningTab;
@@ -14,6 +19,12 @@ class FlightPlanningTab : public QWidget
 public:
     explicit FlightPlanningTab(QWidget *parent = 0);
     ~FlightPlanningTab();
+    QTableWidget *waypointTable;
+
+public slots:
+
+    void addWaypoint(void);
+
 
 private:
     Ui::FlightPlanningTab *ui;
@@ -43,6 +54,11 @@ private:
         float LON;		// Longitude value (East  Positive, West  Negative)
         short Altitude;	// GPS Altitude in centimeters
     };
+
+    void setupMap(void);
+    void setupUI();
+
+    QWebEngineView *mView;
 };
 
 #endif // FLIGHTPLANNINGTAB_H

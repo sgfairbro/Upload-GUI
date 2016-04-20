@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1167</width>
-    <height>691</height>
+    <width>1245</width>
+    <height>801</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -18,7 +18,7 @@
     <item row="0" column="0">
      <widget class="QTabWidget" name="flightPlanningBackup">
       <property name="currentIndex">
-       <number>2</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="tab_1">
        <attribute name="title">
@@ -26,11 +26,6 @@
        </attribute>
       </widget>
       <widget class="QWidget" name="tab_2">
-       <attribute name="title">
-        <string>Flight Planning Backup</string>
-       </attribute>
-      </widget>
-      <widget class="QWidget" name="tab_3">
        <attribute name="title">
         <string>Flight Control</string>
        </attribute>
@@ -44,7 +39,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1167</width>
+     <width>1245</width>
      <height>25</height>
     </rect>
    </property>

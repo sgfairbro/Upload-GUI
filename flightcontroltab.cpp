@@ -6,6 +6,7 @@ FlightControlTab::FlightControlTab(QWidget *parent) :
     ui(new Ui::FlightControlTab)
 {
     ui->setupUi(this);
+    this->setupTransceiver();
     this->connectSignals();
     this->parseBinaryData();
 }
@@ -83,37 +84,36 @@ void FlightControlTab::parseBinaryData(){
     sensorData.Time_Min = 50;
     sensorData.Time_Sec = 30;
     sensorData.Flight_mode = FM_SAFE;
-    sensorData.Rotation_x = 1;
-    sensorData.Rotation_y = 2;
-    sensorData.Rotation_z = 3;
-    sensorData.Accel_x = 4;
-    sensorData.Accel_y = 5;
-    sensorData.Accel_z = 6;
+    sensorData.Rotation_x = 1.1;
+    sensorData.Rotation_y = 2.2;
+    sensorData.Rotation_z = 3.3;
+    sensorData.Accel_x = 4.56;
+    sensorData.Accel_y = 5.67;
+    sensorData.Accel_z = 8;
     sensorData.compass = 10;
-    sensorData.Temp = 50;
+    sensorData.Temp = 50.1;
     sensorData.Altitude = 10;
 
-    for (int i = 0; i < 8; i++){
+    for (int i = 0; i < 9; i++){
 
         sensorData.Servos[i] = i;
 
     }
-    sensorData.Bat22_remaining = 1;
-    sensorData.Bat22_current = 2;
-    sensorData.Bat22_voltage = 3;
+    sensorData.Bat22_remaining = 1.8;
+    sensorData.Bat22_current = 2.8;
+    sensorData.Bat22_voltage = 3.8;
 
-    sensorData.Bat11_current = 4;
-    sensorData.Bat11_remaining = 5;
-    sensorData.Bat11_voltage = 6;
+    sensorData.Bat11_current = 4.1;
+    sensorData.Bat11_remaining = 5.1;
+    sensorData.Bat11_voltage = 6.1;
 
-    sensorData.Air_speed = 1;
+    sensorData.Air_speed = 17;
     sensorData.Cal_status = 10;
-
-
 
     gpsData.WC = 64;
     gpsData.MT = 0x01;
     gpsData.Sequence_num = 2;
+    gpsData.Altitude = 1000;
 
     updateSensorUI(sensorData, gpsData);
 
@@ -161,13 +161,18 @@ void FlightControlTab::updateSensorUI(Sensor_Data_T sensorData, GPS_Data_T gpsDa
     //GPS Data
     ui->altitudeLCD->display(gpsData.Altitude);
 
+}
+
+
+
+void FlightControlTab::setupTransceiver(){
+
 
 
 
 }
 
 void FlightControlTab::writeDataToTextFile(Sensor_Data_T sensorData, GPS_Data_T gpsData){
-
 
 
 

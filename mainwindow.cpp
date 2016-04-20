@@ -18,20 +18,19 @@ MainWindow::MainWindow(QWidget *parent) :
     FlightControlTab *flightControl = new FlightControlTab();
     flightControlGrid->addWidget(flightControl);
 
-    QGridLayout *flightPlanningBackupGrid = new QGridLayout();
-    FlightPlanningBackup *flightPlanBackup = new FlightPlanningBackup();
-    flightPlanningBackupGrid->addWidget(flightPlanBackup);
-
+    /*
     //This could be used for that map thing if time permits
     QQuickView *view = new QQuickView();
     QWidget *container = QWidget::createWindowContainer(view, ui->tab_1);
     view->setSource(QUrl("qrc:/navigation.qml"));
     view->show();
     flightPlanningGrid->addWidget(container);
+    */
 
+
+    ui->tab_2->setLayout(flightControlGrid);
     ui->tab_1->setLayout(flightPlanningGrid);
-    ui->tab_2->setLayout(flightPlanningBackupGrid);
-    ui->tab_3->setLayout(flightControlGrid);
+
 
 }
 
